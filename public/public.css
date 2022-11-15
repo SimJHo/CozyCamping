@@ -65,7 +65,7 @@ header li a:hover{
     min-width: 260px;
 }
 
-.accordion-button:active, .accordion-button:focus {
+.accordion-button:active, .accordion-button:focus, .accordion-button {
     outline:none !important;
     box-shadow:none !important;
     background: none !important;

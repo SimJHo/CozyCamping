@@ -1,3 +1,4 @@
+
 const newURL = window.location.href;
 const searchParams = new URL(newURL).searchParams;
 const id = searchParams.get('id');
@@ -32,17 +33,30 @@ var getCookie = function(name) {
 window.onload = function () {
     if(getCookie('user_id') == '3'){
         $('.write_notice').css('display','block');
+        $('.write_notice2').css('display','block');
     }
     else if(sessionStorage.getItem('user_id') == '3'){
         $('.write_notice').css('display','block');
+        $('.write_notice2').css('display','block');
     }
     else{
         $('.write_notice').css('display','none');
+        $('.write_notice2').css('display','none');
     }
 }
 
 function rewrite(){
     if(confirm("공지사항을 수정하시겠습니까?")){
         location.href="/notice_rewrite.html/rewrite?id="+id;
+    }
+}
+
+function delNotice(){
+    if(confirm("공지사항을 삭제하시겠습니까?")){
+        axios.get('/noticedelete', {
+            params: {
+                id : id
+            }
+        })
     }
 }

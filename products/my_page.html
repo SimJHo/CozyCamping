@@ -53,10 +53,11 @@
                 <div class="tab-pane fade" id="userinfo" role="tabpanel" aria-labelledby="userinfo-tab">
                     <form method="post" action="/userInfoModi" id="joinform" name="joinform">
                         <fieldset>
-                            <input type="hidden" id="m_id" name="m_id" val="">
                             <div class="form-row">
                                 <div class="form-group">
-                                        <label for="m_id">비밀번호 변경</label>
+                                    <input type="hidden" id="m_id" name="m_id" val="">
+
+                                        <label for="">비밀번호 변경</label>
                                     <div class="d-flex justify-content-center pw_change">                                        
                                         <a href="/pw_check.html"><span id="idCheck" class="text-center" style="width: 100%; height: 45px; margin: 0 auto; font-size: 20px; line-height: 45px;">변경하러 가기</span></a>
                                     </div>
@@ -91,14 +92,14 @@
                                 </div>
                                 <hr>
                                 <div class="submit-btn">
-                                    <input class="submit_btn2" type="submit" name="submit" onclick="return validate();" value="회원 정보 수정">
+                                    <input class="submit_btn2" type="submit" name="submit" onclick="return validate()" value="회원 정보 수정">
                                 </div>
                             </div>
                         </fieldset>
                     </form>
                     
-                    <input type="hidden" id="hidden2" value="1">
-                    <input type="hidden" id="hidden3" value="1">
+                    <input type="hidden" id="hidden2" value="0">
+                    <input type="hidden" id="hidden3" value="0">
                 </div>
                 
                 <div class="tab-pane fade" id="qnalist" role="tabpanel" aria-labelledby="qnalist-tab">문의 내역이 없습니다.</div>

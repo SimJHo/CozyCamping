@@ -29,73 +29,75 @@ if(key === "buylist"){
 	$("#userinfo").removeClass("show active");
 	$("#buylist").removeClass("show active");
 	$("#qnalist").addClass("show active");
-	
 }
 
 function validate() {
-    //event.preventDefault();
-    var objID = document.getElementById("m_id");
-    var objEmail = document.getElementById("m_email");
-    var objName = document.getElementById("m_name");
-    var objPnum = document.getElementById("m_tel");
-    var objDate = document.getElementById("m_date");
 
-    //아이디와 패스워드 값 데이터 정규화 공식
-    var regul1 = /^[a-zA-Z0-9]{4,12}$/;
-    //이메일 값 데이터 유효성 체크
-    //[]안에 있는 값만 쓰겠다
+    window.location.href="/login_page.html";
 
-    //이메일 정규화 공식
-    var regul2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
-    //이름 정규화 공식
-    var regul3 = /^[가-힝a-zA-Z]{2,}$/;
-    //var email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+    if(confirm("회원 정보를 변경하시겠습니까?")){
+        var objEmail = document.getElementById("m_email");
+        var objName = document.getElementById("m_name");
+        var objPnum = document.getElementById("m_tel");
+        var objDate = document.getElementById("m_date");
 
-    //내가 입력한 데이터를 검사하는 check()
-    //만약 내가 아이디에 정규화 방식을 하나라도 지키지 않으면 if문 안으로 들어가서 alert message를 띄움
-    if (!check(regul1,objID,"아이디는 4~12자의 대소문자와 숫자로만 입력 가능합니다.")) {
-        return false;//반환 할 곳 없이 if문 탈출
-    }
-    //휴대번호를 입력 하지 않았을 경우
-    if ((objPnum.value) == ""){
-        alert("휴대번호를 입력하지 않았습니다.");
-        objID.focus();
-        return false;
-    }
-    //이메일 입력 안했을 경우
-    if ((objEmail.value)=="") {
-        alert("이메일을 입력해 주세요");
-        objEmail.focus();
-        return false;
-    }
-    //이메일이 잘못된 경우
-    if (!check(regul2,objEmail,"이메일을 잘못 입력 했습니다.")) {
-        return false;
-    }
-    //이름 입력 안 한 경우
-    if ((objName.value)=="") {
-        alert("이름을 입력해 주세요");
-        objName.focus();
-        return false;
-    }
-    //이름에 특수 문자가 들어간 경우
-    if (!check(regul3,objName,"이름이 잘못 되었습니다.")) {
-        return false;
-    }
-    if ((objDate.value)=="") {
-        alert("생년월일을 입력해 주세요");
-        objDate.focus();
-        return false;
-    }
-    if($('#hidden2').val() == 1){
-        alert("휴대번호 중복 확인을 해주세요");
-        objPnum.focus();
-        return false;
-    }
-    if($('#hidden3').val() == 1){
-        alert("이메일 중복 확인을 해주세요");
-        objEmail.focus();
-        return false;
+
+        //이메일 값 데이터 유효성 체크
+        //[]안에 있는 값만 쓰겠다
+
+        //이메일 정규화 공식
+        var regul2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
+        //이름 정규화 공식
+        var regul3 = /^[가-힝a-zA-Z]{2,}$/;
+        //var email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+        var regul4 = /([0-9]{2}(0[1-9]|1[0-2])(0[1-9]|[1,2][0-9]|3[0,1]))/;
+
+        //내가 입력한 데이터를 검사하는 check()
+
+        //휴대번호를 입력 하지 않았을 경우
+        if ((objPnum.value) == ""){
+            alert("휴대번호를 입력하지 않았습니다.");
+            objPnum.focus();
+            return false;
+        }
+        //이메일 입력 안했을 경우
+        if ((objEmail.value)=="") {
+            alert("이메일을 입력해 주세요");
+            objEmail.focus();
+            return false;
+        }
+        //이메일이 잘못된 경우
+        if (!check(regul2,objEmail,"이메일을 잘못 입력 했습니다.")) {
+            return false;
+        }
+        //이름 입력 안 한 경우
+        if ((objName.value)=="") {
+            alert("이름을 입력해 주세요");
+            objName.focus();
+            return false;
+        }
+        //이름에 특수 문자가 들어간 경우
+        if (!check(regul3,objName,"이름이 잘못 되었습니다.")) {
+            return false;
+        }
+        if (!check(regul4,objDate,"생년월일이 잘못 되었습니다.")) {
+            return false;
+        }
+        if ((objDate.value)=="") {
+            alert("생년월일을 입력해 주세요");
+            objDate.focus();
+            return false;
+        }
+        if($('#hidden2').val() == 1){
+            alert("휴대번호 중복 확인을 해주세요");
+            objPnum.focus();
+            return false;
+        }
+        if($('#hidden3').val() == 1){
+            alert("이메일 중복 확인을 해주세요");
+            objEmail.focus();
+            return false;
+        }
     }
 }
 
@@ -194,14 +196,6 @@ function emailCheck(){
     }
 }
 
-function focusOut2(){
-    $('#hidden2').val(1);
-}
-
-function focusOut3(){
-    $('#hidden3').val(1);
-}
-
 $(document).ready(function(){
     $(".form-control").keyup(function(event) {
         if (event.which === 13) {
@@ -249,4 +243,12 @@ $(document).ready(function(){
         $("#qnalist").removeClass("show active");
         $("#buylist").addClass("show active");
     }
+
+    $('#m_tel').change( function() {
+        $('#hidden2').val(1);
+    });
+
+    $('#m_email').change( function() {
+        $('#hidden3').val(1);
+    });
 })

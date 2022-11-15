@@ -110,6 +110,10 @@ app.get('/notice_rewrite.html/:alias', function (req, res) {
   res.render('notice_write.html');
 })
 
+app.get('/FAQ.html', function (req, res) {
+  res.render('FAQ.html');
+})
+
 //데이터
 app.get('/productlist', function (req, res) {
   
@@ -232,7 +236,7 @@ app.post('/join_com', function (req, res) {
 app.get('/login_com', function (req, res) {
   pool.getConnection(function (err, connection) {
     if (err) throw err;
-    var sql = 'SELECT m_name,user_id,m_email,m_tel,m_date FROM login WHERE ((m_id=?) && (m_pass=?))';
+    var sql = 'SELECT m_id,m_name,user_id,m_email,m_tel,m_date FROM login WHERE ((m_id=?) && (m_pass=?))';
     var params = [req.query.m_id, req.query.m_pass];
     connection.query(sql, params, function (error, results, fields) {
       connection.release();
@@ -542,10 +546,9 @@ app.get('/cartDelCh', function (req, res) {
 })
 
 app.post('/userInfoModi', function (req, res) {
-  
   pool.getConnection(function (err, connection) {
     if (err) throw err;
-    connection.query('UPDATE login SET m_name=? ,m_tel=? ,m_email=? ,m_date=? WHERE m_email=?', [req.body.m_name, req.body.m_tel, req.body.m_email, req.body.m_date, req.body.m_email], function (error, results, fields) {
+    connection.query('UPDATE login SET m_name=? ,m_tel=? ,m_email=? ,m_date=? WHERE m_id=?', [req.body.m_name, req.body.m_tel, req.body.m_email, req.body.m_date, req.body.m_id], function (error, results, fields) {
       connection.release();
       // console.log(results);
       if (error) throw error;
@@ -675,6 +678,34 @@ app.get('/noticerewrite', function (req, res) {
   pool.getConnection(function (err, connection) { 
     if (err) throw err;
     connection.query('UPDATE notice SET title=?, text=? WHERE num=?', [req.query.title, req.query.text, req.query.id], function (error, results, fields) {
+      connection.release();
+      if (error) {
+        console.log(error);
+        throw error;
+      }
+      res.send({data:results});
+    });  
+  }); 
+})
+
+app.get('/noticedelete', function (req, res) {
+  pool.getConnection(function (err, connection) { 
+    if (err) throw err;
+    connection.query('DELETE FROM notice WHERE num=?', req.query.id, function (error, results, fields) {
+      connection.release();
+      if (error) {
+        console.log(error);
+        throw error;
+      }
+      res.send({data:results});
+    });  
+  }); 
+})
+
+app.get('/FAQ', function (req, res) {
+  pool.getConnection(function (err, connection) { 
+    if (err) throw err;
+    connection.query('SELECT * FROM faq', function (error, results, fields) {
       connection.release();
       if (error) {
         console.log(error);

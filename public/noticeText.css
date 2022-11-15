@@ -18,7 +18,7 @@ tbody{
     text-decoration: none;
     cursor: pointer;
     color: #F1EBE5;
-    background-color: #EC5B2D;
+    background-color: #325341;
     width: 150px;
     height: 40px;
     border: none;
@@ -29,5 +29,23 @@ tbody{
     font-size: 18px;
 }
 .write_notice:hover{
+    color: #EC5B2D;
+}
+
+.write_notice2{
+    text-decoration: none;
+    cursor: pointer;
+    color: #F1EBE5;
+    background-color: #EC5B2D;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    float: right;
+    display: none;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.write_notice2:hover{
     color: #325341;
 }

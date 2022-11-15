@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../public/FAQ.js"></script>
+    <script type="text/javascript" src="../public/public.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/public.css">
+    <link rel="stylesheet" type="text/css" href="../public/FAQ.css">
+</head>
+
+<body>
+    <header id="header">
+        <script type="text/javascript" src="../public/header.js"></script>
+    </header>
+
+    <nav class="navbar navbar-expand" id="nav">
+        <script type="text/javascript" src="../public/nav.js"></script>
+    </nav>
+
+    <aside>
+        
+    </aside>
+
+    <section class="container-fluid justify-content-center text-center">
+        <div id="section">
+            <div class="container FAQ_container">
+                <h1 class="recommend">
+                    <hr>FAQ<br>
+                        <span style="font-size: 15px;">자주하는 질문</span>
+                    <hr>
+                </h1>
+                
+                <div class="notice_search">
+                    <input class="FAQ_search_input" type="text" name="" placeholder="FAQ 검색">
+                    <span class="FAQ_search_icon" onclick="noticeSearch()"><img src="../imge/검색4.png" width="20px" height="20px"></span>
+                </div>
+
+                <div class="container text-center">
+                    <!-- 탭 메뉴 -->
+                    <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first"
+                                type="button" role="tab" aria-controls="first" aria-selected="true" style="color: #325341; font-weight: bolder;">회원가입/정보</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#second" type="button"
+                                role="tab" aria-controls="second" aria-selected="false" style="color: #325341; font-weight: bolder;">결제/배송</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="third-tab" data-bs-toggle="tab" data-bs-target="#third" type="button"
+                                role="tab" aria-controls="third" aria-selected="false" style="color: #325341; font-weight: bolder;">교환/반품/환불</button>
+                        </li>
+                    </ul>
+                
+                    <!-- 내용 -->
+                    <div class="tab-content d-flex justify-content-center row" id="myTabContent">
+
+                        <!-- 1번 탭 -->
+                        <div class="tab-pane fade show active col" id="first" role="tabpanel" aria-labelledby="first-tab">
+                            <div class="accordion" id="accordionExample">
+
+                                <!-- 1-1번 아코디언 -->
+                                <!-- <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading11">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11"
+                                            aria-expanded="true" aria-controls="collapse11" style="color: #325341; font-weight: bolder;">
+                                            <img src="../imge/letter-q.png" width="30px" height="30px">&nbsp;
+                                            질문 영역 #1
+                                        </button>
+                                    </h2>
+                                    <div id="collapse11" class="accordion-collapse collapse show" aria-labelledby="heading11"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body text-start">
+                                            <img src="../imge/letter-a.png" width="30px" height="30px">&nbsp;
+                                            답변 영역 #1
+                                        </div>
+                                    </div>
+                                </div> -->
+            
+                            </div>
+                        </div>
+                        
+                        <!-- 2번 탭 -->
+                        <div class="tab-pane fade col" id="second" role="tabpanel" aria-labelledby="second-tab">
+                            <div class="accordion" id="accordionExample2">
+
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- 3번 탭 -->
+                        <div class="tab-pane fade col" id="third" role="tabpanel" aria-labelledby="third-tab">
+                            <div class="accordion" id="accordionExample3">
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>   
+
+        <div style="position: fixed; bottom: 5px; right: 10px;">
+            <a href="#header">
+                <img src="../imge/위로2.png" title="맨 위로" 
+                style="width: 35px; height: 35px; padding: 5px; background-color: #325341; border-radius: 5px;">
+            </a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <script type="text/javascript" src="../public/footer.js"></script>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

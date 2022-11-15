@@ -30,6 +30,7 @@ function doSubmit(){
         if($('#check_box').is(':checked') == true && response.data.data.length == 1){
             location.href="/";
             setCookie('login','ok',1);
+            setCookie('m_id',response.data.data[0].m_id,1);
             setCookie('m_name',response.data.data[0].m_name,1);
             setCookie('user_id',response.data.data[0].user_id,1);
             setCookie('m_tel',response.data.data[0].m_tel,1);
@@ -41,6 +42,7 @@ function doSubmit(){
         else if($('#check_box').is(':checked') == false && response.data.data.length == 1){
             location.href="/";
             sessionStorage.setItem('login','ok');
+            sessionStorage.setItem('m_id',response.data.data[0].m_id);
             sessionStorage.setItem('m_name',response.data.data[0].m_name);
             sessionStorage.setItem('user_id',response.data.data[0].user_id);
             sessionStorage.setItem('m_tel',response.data.data[0].m_tel);
@@ -64,8 +66,11 @@ $(document).ready(function() {
     });
 
     sessionStorage.clear();
+    deleteCookie('m_id');
     deleteCookie('login');
     deleteCookie('m_name');
     deleteCookie('user_id');
-    
+    deleteCookie('m_tel');
+    deleteCookie('m_date');
+    deleteCookie('m_email');
 });
