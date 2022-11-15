@@ -1,0 +1,30 @@
+.form-control{
+    color: #325341;
+}
+.form-control:focus{
+    color: #325341;
+    border: 5px solid #325341;
+    outline: none;
+}
+.col-form-label{
+    color: #325341;
+    font-weight: bolder;
+}
+.form-select:focus{
+    color: #325341;
+    border: 5px solid #325341;
+    outline: none;
+}
+.submit_btn{
+    width: 420px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EC5B2D;
+    color: #F1EBE5;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.submit_btn:hover{
+    color: #325341;
+}

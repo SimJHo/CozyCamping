@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="../public/jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="../public/mypage.js"></script>
+        <script type="text/javascript" src="../public/public.js"></script>
+        <link rel="stylesheet" type="text/css" href="../public/public.css">
+        <link rel="stylesheet" type="text/css" href="../public/mypage.css">
+    </head>
+<body>
+    <header id="header">
+        <script type="text/javascript" src="../public/header.js"></script>
+    </header>
+
+    <nav class="navbar navbar-expand" id="nav">
+        <script type="text/javascript" src="../public/nav.js"></script>
+    </nav>
+
+    <section>
+        <div class="text-center">
+            <h1 class="recommend">
+                <hr>마이 페이지<hr>
+            </h1>
+        </div>
+        <div class="container text-center">
+            <!-- 탭 메뉴 -->
+            <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="buylist-tab" data-bs-toggle="tab" data-bs-target="#buylist"
+                        type="button" role="tab" aria-controls="buylist" aria-selected="true">구매 내역</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="userinfo-tab" data-bs-toggle="tab" data-bs-target="#userinfo" type="button"
+                        role="tab" aria-controls="userinfo" aria-selected="false">회원 정보</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="qnalist-tab" data-bs-toggle="tab" data-bs-target="#qnalist" type="button"
+                        role="tab" aria-controls="qnalist" aria-selected="false">문의 내역</button>
+                </li>
+            </ul>
+        
+            <!-- 내용 -->
+            <div class="tab-content d-flex justify-content-center" id="myTabContent">
+                <div class="tab-pane fade show active" id="buylist" role="tabpanel" aria-labelledby="buylist-tab">구매 내역이 없습니다.</div>
+                
+                <div class="tab-pane fade" id="userinfo" role="tabpanel" aria-labelledby="userinfo-tab">
+                    <form method="post" action="/userInfoModi" id="joinform" name="joinform">
+                        <fieldset>
+                            <input type="hidden" id="m_id" name="m_id" val="">
+                            <div class="form-row">
+                                <div class="form-group">
+                                        <label for="m_id">비밀번호 변경</label>
+                                    <div class="d-flex justify-content-center pw_change">                                        
+                                        <a href="/pw_check.html"><span id="idCheck" class="text-center" style="width: 100%; height: 45px; margin: 0 auto; font-size: 20px; line-height: 45px;">변경하러 가기</span></a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label for="m_name">이름</label>
+                                    <input type="text" class="form-control shadow-none" name="m_name" id="m_name" maxlength="10" value="">
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label for="m_tel">휴대번호</label>
+                                    <div class="d-flex">
+                                        <input type="tel" class="form-control shadow-none" onkeyup="inputPhoneNumber(this);" name="m_tel" id="m_tel" maxlength="13" value="">
+                                        <span onclick="telCheck()" id="idCheck" class="text-center">중복 확인</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">                            
+                                        <label for="m_email">메일주소</label>
+                                    <div class="d-flex">
+                                        <input type="email" class="form-control shadow-none" name="m_email" id="m_email" value="">
+                                        <span onclick="emailCheck()" id="idCheck" class="text-center">중복 확인</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label for="m_date">생년월일</label>
+                                    <div class="input-group">                                
+                                        <input type="text" class="form-control shadow-none" name="m_date" id="m_date" maxlength="6" value="">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="submit-btn">
+                                    <input class="submit_btn2" type="submit" name="submit" onclick="return validate();" value="회원 정보 수정">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    
+                    <input type="hidden" id="hidden2" value="1">
+                    <input type="hidden" id="hidden3" value="1">
+                </div>
+                
+                <div class="tab-pane fade" id="qnalist" role="tabpanel" aria-labelledby="qnalist-tab">문의 내역이 없습니다.</div>
+            </div>
+        </div>
+
+
+        <div style="position: fixed; bottom: 5px; right: 10px;">
+            <a href="#header">
+                <img src="../imge/위로2.png" title="맨 위로" 
+                style="width: 35px; height: 35px; padding: 5px; background-color: #325341; border-radius: 5px;">
+            </a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <script type="text/javascript" src="../public/footer.js"></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

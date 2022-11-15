@@ -1,0 +1,129 @@
+.detail_main_img{
+    width: 500px;
+}
+.detail_order_box{
+    padding-left: 30px;
+    width: 500px;
+}
+.detail_explain_box{
+    max-width: 1200px;
+}
+.share_btn{
+    width: 450px;
+    height: 40px;
+}
+.share_btn img{
+    float: right;
+}
+.korean{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #325341;
+}
+.english{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #325341;
+}
+.won{
+    display: inline;
+    font-weight: bolder;
+    color: #325341;
+}
+.price{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #325341;
+}
+.count_text{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #325341;
+    vertical-align: middle;
+    display: inline-block;
+}
+table{
+    display: inline-block;
+    vertical-align: middle;
+}
+#ct_qty{
+    width: 250px;
+    height: 30px;
+}
+#total_amount{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #325341;
+}
+.go_cart,.buy_btn{
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #F1EBE5;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.go_cart{
+    background-color: #325341;
+}
+.buy_btn{
+    background-color: #EC5B2D;
+}
+.go_cart:hover{
+    color: #EC5B2D;
+}
+.buy_btn:hover{
+    color: #325341;
+}
+.expl_btn{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: #325341;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #F1EBE5;
+}
+.expl_btn:hover{
+    color: #EC5B2D;
+}
+.detail_explain_box{
+    margin-top: 150px;
+}
+.modal-title{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #325341;
+}
+.modal-body{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #325341;
+}
+.continue,.opencart{
+    border: none;
+    border-radius: 10px;
+    color: #F1EBE5;
+    width: 225px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.opencart a{
+    text-decoration: none;
+    color: #F1EBE5;
+}
+.continue{
+    background-color: #325341;
+}
+.opencart{
+    background-color: #EC5B2D;
+}
+.continue:hover{
+    color: #EC5B2D;
+}
+.opencart:hover a{
+    color: #325341;
+}

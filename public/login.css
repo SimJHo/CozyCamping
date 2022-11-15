@@ -1,0 +1,53 @@
+
+.flex-column{
+    width: 473px;
+}
+.login_text1{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #325341;
+}
+.login_text2{
+    font-size: 25px;
+    font-weight: bolder;
+    color: #325341;
+}
+.login_text3{
+    font-size: 25px;
+    font-weight: bolder;
+    color: #F1EBE5;
+    background-color: #EC5B2D;
+    border: none;
+    border-radius: 10px;
+    width: 450px;
+    height: 55px;
+    padding: 10px;
+    line-height: 17px;
+}
+.login_text3:hover{
+    color: #325341;
+}
+.login_text4{
+    font-size: 13px;
+}
+
+form{
+    width: 450px;
+}
+.form-control:focus{
+    color: #325341;
+    border: 5px solid #325341;
+    outline: none;
+}
+.form-floating{
+    width: 450px;
+}
+.check_box,.login_text5{
+    color: #325341;
+    font-weight: bolder;
+}
+.check_box a,.login_text5 a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #325341;
+}

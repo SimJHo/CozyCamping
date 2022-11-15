@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../public/itemPostList.js"></script>
+    <script type="text/javascript" src="../public/public.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/public.css">
+</head>
+
+<body>
+    <header id="header">
+        <script type="text/javascript" src="../public/header.js"></script>
+    </header>
+
+    <nav class="navbar navbar-expand" id="nav">
+        <script type="text/javascript" src="../public/nav.js"></script>
+    </nav>
+
+    <aside>
+        
+    </aside>
+
+    <section class="container-fluid justify-content-center text-center">
+        <div id="section">
+            <div class="section">
+                <div id="sort">
+                    <h1 class="recommend">
+                        
+                    </h1>
+                    <input type="radio" class="btn-check radio1" name="btnradio" id="btnradio1" autocomplete="off" checked onclick="tableInsert()">
+                    <label class="btn recommend_btn recommend_btn1" for="btnradio1" >신상품순</label>
+                    
+                    <input type="radio" class="btn-check radio2" name="btnradio" id="btnradio2" autocomplete="off" onclick="tableInsert()">
+                    <label class="btn recommend_btn recommend_btn2" for="btnradio2" >인기제품순</label>
+                    
+                    <input type="radio" class="btn-check radio3" name="btnradio" id="btnradio3" autocomplete="off" onclick="tableInsert()">
+                    <label class="btn recommend_btn recommend_btn3" for="btnradio3" >낮은가격순</label>
+
+                    <input type="radio" class="btn-check radio4" name="btnradio" id="btnradio4" autocomplete="off" onclick="tableInsert()">
+                    <label class="btn recommend_btn recommend_btn4" for="btnradio4" >높은가격순</label>
+                    <hr>
+                </div>
+
+                <input type="hidden" class="list_length" value="100">
+                <div id="item" class="item_list row justify-content-center">
+                    
+                </div>
+                
+                <div aria-label="Page navigation example">		
+                    <ul id="dyn_ul" class="pagination" style="justify-content: center;">
+                      <!-- <li class="page-item"><a class="page-link" href="#">이전</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>	    
+                      <li class="page-item"><a class="page-link" href="#">다음</a></li> -->
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div style="position: fixed; bottom: 5px; right: 10px;">
+            <a href="#header">
+                <img src="../imge/위로2.png" title="맨 위로" 
+                style="width: 35px; height: 35px; padding: 5px; background-color: #325341; border-radius: 5px;">
+            </a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <script type="text/javascript" src="../public/footer.js"></script>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

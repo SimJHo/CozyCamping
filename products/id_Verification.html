@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../public/join.js"></script>
+    <script type="text/javascript" src="../public/idveri.js"></script>
+    <script type="text/javascript" src="../public/public.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/public.css">
+    <link rel="stylesheet" type="text/css" href="../public/idveri.css">
+</head>
+
+<body>
+    <header id="header">
+        <script type="text/javascript" src="../public/header.js"></script>
+    </header>
+
+    <nav class="navbar navbar-expand" id="nav">
+        <script type="text/javascript" src="../public/nav.js"></script>
+    </nav>
+
+    <aside>
+        
+    </aside>
+
+    <section class="container-fluid justify-content-center text-center">
+        <div id="section">
+            <div class="container idveri_container">
+                <h1 class="recommend">
+                    <hr>아이디 찾기<hr>
+                </h1>
+                <form method="post" id="idveriform" name="idveriform">
+                    <fieldset>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="m_name">이름</label>
+                                <input type="text" class="form-control shadow-none" name="m_name" id="m_name" maxlength="10" placeholder="이름" required>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="m_tel">휴대번호</label>
+                                <input type="tel" class="form-control shadow-none" onkeyup="inputPhoneNumber(this);" name="m_tel" id="m_tel" maxlength="13" placeholder="휴대번호" required>
+                            </div>
+                            <hr>
+                            <button type="button" class="submit_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="doSubmit()">
+                                아이디 찾기
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="staticBackdropLabel">아이디 찾기 결과</h1>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="close_btn1" data-bs-dismiss="modal">닫기</button>
+                        <a href="/pw_Verification.html">
+                            <button type="button" class="close_btn2" data-bs-dismiss="modal">비밀번호 찾기</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: fixed; bottom: 5px; right: 10px;">
+            <a href="#header">
+                <img src="../imge/위로2.png" title="맨 위로" 
+                style="width: 35px; height: 35px; padding: 5px; background-color: #325341; border-radius: 5px;">
+            </a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <script type="text/javascript" src="../public/footer.js"></script>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

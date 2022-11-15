@@ -1,0 +1,42 @@
+thead{
+    background-color: #325341;
+    color: #F1EBE5;
+}
+tbody{
+    color: #325341;
+}
+tbody>tr:hover{
+    background-color: #F1EBE5;
+}
+td>a{
+    text-decoration: none;
+    color: #325341;
+    cursor: pointer;
+}
+td>a:hover{
+    color: #EC5B2D;
+}
+.notice_search_input{
+    border: none;
+    border-bottom: 2px solid #325341;
+}
+.notice_search_icon{
+    cursor: pointer;
+}
+.write_notice{
+    text-decoration: none;
+    cursor: pointer;
+    color: #F1EBE5;
+    background-color: #EC5B2D;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    float: right;
+    display: none;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.write_notice:hover{
+    color: #325341;
+}

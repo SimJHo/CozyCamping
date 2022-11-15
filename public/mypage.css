@@ -1,0 +1,59 @@
+.nav-tabs{
+    margin-top: 50px;
+}
+.nav-link{
+    color: #325341;
+    font-weight: bolder;
+}
+.nav-link:hover{
+    color: #EC5B2D;
+}
+.tab-content{
+    margin-top: 50px;
+}
+.form-control:focus{
+    color: #325341;
+    border: 5px solid #325341;
+    outline: none;
+}
+form label{
+    font-weight: bolder;
+    color: #325341;
+    margin-bottom: 10px;
+}
+.submit_btn2{
+    width: 430px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EC5B2D;
+    color: #F1EBE5;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.submit_btn2:hover{
+    color: #325341;
+}
+#idCheck{
+    cursor: pointer;
+    display: block;
+    background-color: #325341;
+    color: #F1EBE5;
+    margin-left: 10px;
+    line-height: 37px;
+    width: 100px;
+    border-radius: 10px;
+}
+#idCheck:hover{
+    color: #EC5B2D;
+}
+#m_id,#m_tel,#m_email{
+    width: 330px;
+}
+section{
+    min-height: 800px;
+}
+.pw_change>a{
+    text-decoration: none;
+    width: 100%;
+}

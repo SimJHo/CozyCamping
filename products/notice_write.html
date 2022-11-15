@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../public/noticeWrite.js"></script>
+    <script type="text/javascript" src="../public/public.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/public.css">
+    <link rel="stylesheet" type="text/css" href="../public/noticeWrite.css">
+</head>
+
+<body>
+    <header id="header">
+        <script type="text/javascript" src="../public/header.js"></script>
+    </header>
+
+    <nav class="navbar navbar-expand" id="nav">
+        <script type="text/javascript" src="../public/nav.js"></script>
+    </nav>
+
+    <aside>
+        
+    </aside>
+
+    <section class="container-fluid justify-content-center text-center">
+        <div id="section">
+            <div class="container notice_container">
+                <h1 class="recommend">
+                    <hr>공지사항 작성<hr>
+                </h1>
+                <!-- include libraries(jQuery, bootstrap) -->
+                <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+                <!-- include summernote css/js -->
+                <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+                <form id="writeform" name="writeform">
+                    <div class="mb-3 mt-3 row title_div">
+                        <label for="title" class="col-sm-3 col-form-label">글 제목</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control shadow-none" id="title" name="title" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-3 row">
+                        <label for="summernote" class="col-sm-3 col-form-label">글 내용</label>
+                        <div class="col-sm-9">
+                            <textarea id="summernote" name="editordata" required></textarea>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <button type="button" class="submit_btn" onclick="submit()">공지사항 등록</button>
+
+                <button class="float-end back_to_list" onclick="history.back()">목록</button>
+            </div>
+        </div>   
+
+        <div style="position: fixed; bottom: 5px; right: 10px;">
+            <a href="#header">
+                <img src="../imge/위로2.png" title="맨 위로" 
+                style="width: 35px; height: 35px; padding: 5px; background-color: #325341; border-radius: 5px;">
+            </a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <script type="text/javascript" src="../public/footer.js"></script>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

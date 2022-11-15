@@ -1,0 +1,228 @@
+
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+     /* 스크롤바의 길이 */
+    background: #325341; /* 스크롤바의 색상 */
+    border: 1px solid #F1EBE5;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;  /*스크롤바 뒷 배경 색상*/
+}
+
+/* Header */
+.offcanvas-body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+     /* 스크롤바의 길이 */
+    background: #325341; /* 스크롤바의 색상 */
+    border: 1px solid #F1EBE5;
+    border-radius: 10px;
+}
+
+.offcanvas-body::-webkit-scrollbar-track {
+    background: white;  /*스크롤바 뒷 배경 색상*/
+}
+header li{
+    list-style: none;
+}
+
+header li a{
+    text-decoration: none;
+    color: #325341;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+header li a:hover{
+    color: #EC5B2D;
+}
+#user_name{
+    font-size: 12px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    color: #325341;
+}
+.header_icon{
+    min-width: 255px;
+}
+.search_input{
+    border: none;
+    border-bottom: 4px solid #325341;
+}
+
+.col{
+    min-width: 260px;
+}
+
+.accordion-button:active, .accordion-button:focus {
+    outline:none !important;
+    box-shadow:none !important;
+    background: none !important;
+}
+.float-end{
+    text-decoration: none;
+}
+.go_logout,.go_reg{
+    display: none;
+}
+
+/* Nav */
+
+nav{
+    background-color: #325341;
+    height: 60px;           
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover::after{
+    color: #EC5B2D;
+}
+.dropdown-menu{
+    background-color: #325341;
+    border: #325341;
+}
+.dropdown-item{
+    color: #F1EBE5;
+}
+
+/* List */
+section{
+    margin-top: 150px;
+}
+.recommend{
+    color: #325341;
+    font-weight: bolder;
+}
+.recommend_btn{
+    color: #325341;
+}
+#btnradio1:checked~.recommend_btn1{
+    color: #F1EBE5;
+    background-color: #325341;
+}
+#btnradio2:checked~.recommend_btn2{
+    color: #F1EBE5;
+    background-color: #325341;
+}
+#btnradio3:checked~.recommend_btn3{
+    color: #F1EBE5;
+    background-color: #325341;
+}
+#btnradio4:checked~.recommend_btn4{
+    color: #F1EBE5;
+    background-color: #325341;
+}
+.card{
+    width: 340px;
+    height: 550px;
+    padding: 0;
+    margin: 10px;
+}
+.card img{
+    cursor: pointer;
+}
+.card a{
+    color: #325341;
+    text-decoration: none;
+    cursor: pointer;
+}
+.card a:hover{
+    color: #EC5B2D;
+}
+.name_kr{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.name_en{
+    font-size: 15px;
+    font-weight: bolder;
+}
+.price{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.page-link{
+    color: #325341;
+}
+.page-link:hover{
+    color: #EC5B2D;
+}
+#dyn_ul{
+    margin-top: 20px;
+}
+.page-link:focus{
+    color: #EC5B2D;
+}
+.page-link:focus {
+    border-color: #EC5B2D;
+    box-shadow: inset 0 2px 2px #EC5B2D;
+}
+.rounded{
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+
+footer{
+    margin-top: 150px;
+    background-color: #325341;
+    color: #F1EBE5;
+}
+
+footer a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #F1EBE5;
+}
+footer a:hover{
+    color: #EC5B2D;
+}

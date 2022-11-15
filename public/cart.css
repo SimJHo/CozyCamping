@@ -1,0 +1,211 @@
+
+.ch_del_btn,.del_btn{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #325341;
+    color: #F1EBE5;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.ch_del_btn:hover,.del_btn:hover{
+    color: #EC5B2D;
+}
+
+.order_price{
+    font-size: 29px;
+    font-weight: bolder;
+    color: #325341;
+}
+.sumcount{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #325341;
+}
+.summoney{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #325341;
+}
+
+.order_btn,.back_btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.order_btn{
+    background-color: #EC5B2D;
+    color: #F1EBE5;
+}
+.back_btn{
+    background-color: #325341;
+    color: #F1EBE5;
+}
+.order_btn:hover{
+    color: #325341;
+}
+.back_btn:hover{
+    color: #EC5B2D;
+}
+
+.pname{
+    color: #325341;
+    padding-top: 10px;
+}
+#local_title{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.up,.down{
+    background-color: #325341;
+    color: #F1EBE5;
+    font-size: 20px;
+    margin: 5px;
+    font-weight: bolder;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    line-height: 20px;
+}
+.basketprice,.sum{
+    color: #325341;
+    padding-top: 3px;
+}
+.basketcmd>a{
+    text-decoration: none;
+    color: #F1EBE5;
+}
+.basketcmd{
+    width: 45px;
+    height: 30px;
+    background-color: #325341;
+    padding-top: 3px;
+    border-radius: 5px;
+}
+.data{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.price_area{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.delete_btn:hover, .up:hover, .down:hover{
+    color: #EC5B2D;
+}
+
+.checks {
+    position: relative;
+}
+
+.checks input[type="checkbox"] {
+    /* 실제 체크박스는 화면에서 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.checks input[type="checkbox"]+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checks input[type="checkbox"]+label:before {
+    /* 가짜 체크박스 */
+    content: ' ';
+    display: inline-block;
+    width: 21px;
+    /* 체크박스의 너비를 지정 */
+    height: 21px;
+    /* 체크박스의 높이를 지정 */
+    line-height: 21px;
+    /* 세로정렬을 위해 높이값과 일치 */
+    margin: -2px 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #fafafa;
+    border: 4px solid #cacece;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+}
+
+.checks input[type="checkbox"]+label:active:before,
+.checks input[type="checkbox"]:checked+label:active:before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checks input[type="checkbox"]:checked+label:before {
+    /* 체크박스를 체크했을때 */
+    content: '\2714';
+    /* 체크표시 유니코드 사용 */
+    color: #99a1a7;
+    text-shadow: 1px 1px #fff;
+    background: #e9ecee;
+    border-color: #adb8c0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+}
+
+
+.checks.etrans input[type="checkbox"]+label {
+    padding-left: 30px;
+}
+
+.checks.etrans input[type="checkbox"]+label:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    opacity: .6;
+    box-shadow: none;
+    border-color: #EC5B2D;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+.checks.etrans input[type="checkbox"]:checked+label:before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    background: transparent;
+    border-color: transparent #EC5B2D #EC5B2D transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.no-csstransforms .checks.etrans input[type="checkbox"]:checked+label:before {
+    /*content:"\2713";*/
+    content: "\2714";
+    top: 0;
+    left: 0;
+    width: 21px;
+    line-height: 21px;
+    color: #EC5B2D;
+    text-align: center;
+    border: 1px solid #EC5B2D;
+}
+.etrans{
+    margin-bottom: 20px;
+}
+.data{
+    border-bottom: 1px solid lightgray;
+}

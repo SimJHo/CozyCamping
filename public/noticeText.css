@@ -1,0 +1,33 @@
+thead{
+    background-color: #325341;
+    color: #F1EBE5;
+}
+tbody{
+    color: #325341;
+}
+.back_to_list{
+    border: none;
+    border-radius: 5px;
+    background-color: #325341;
+    color: #F1EBE5;
+}
+.back_to_list:hover{
+    color: #EC5B2D;
+}
+.write_notice{
+    text-decoration: none;
+    cursor: pointer;
+    color: #F1EBE5;
+    background-color: #EC5B2D;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    float: right;
+    display: none;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.write_notice:hover{
+    color: #325341;
+}
