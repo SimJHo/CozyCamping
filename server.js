@@ -726,7 +726,7 @@ app.get('/sendemail', function (req, res) {
     port: 2525,
     auth: {
       user: "email-verification@naver.com",
-      pass: "password"
+      pass: "tlawnsgh1!A"
     }
   };
 
